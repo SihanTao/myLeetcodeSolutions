@@ -8,12 +8,12 @@ public class Solution {
   }
 
   private TreeNode build(int[] nums, int start, int end) {
-    if (start >= end) {
+    if (start == end) {
       return null;
     }
 
     // Find the maximum of the nums and record its index
-    int index = 0;
+    int index = start;
     for (int i = start; i < end; i++) {
       if (nums[index] < nums[i]) {
         index = i;
